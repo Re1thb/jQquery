@@ -37,4 +37,18 @@ $(document).ready(function() {
               width: '150px'
             });
           });
+
+          $("#getData").click(function(){
+            $.ajax({
+                url:'https://api.chucknorris.io/jokes/random',
+                method:'GET',
+                success: function(data) {
+                    $('#joke').text(data.value); // Display the joke in the paragraph
+                },
+                error: function() {
+                    alert('Error fetching data.');
+                }
+
+            })
+          })
 })

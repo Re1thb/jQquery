@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<button id="getData">Get Random Joke</button>
+<p id="joke"></p><br>
+
+<script>
+    $(document).ready(function() {
+        $('#getData').click(function() {
+            $.ajax({
+                url: 'https://api.chucknorris.io/jokes/random',
+                method: 'GET',
+                success: function(data) {
+                    $('#joke').text(data.value); // Display the joke in the paragraph
+                },
+                error: function() {
+                    alert('Error fetching data.');
+                }
+            });
+        });
+    });
+</script>
