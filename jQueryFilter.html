@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Filter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+    <script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup",function(){
+            var searchValve=$(this).val().toLowerCase();
+            console.log(searchValve)
+            $("ul li").filter(function(){
+                // $(this).toggle($(this).text().toLowerCase().indexOf(searchValve) >-1)
+                $(this).toggle($(this).text().toLowerCase().indexOf(searchValve) > -1)
+            });
+        });
+    });
+//     $(document).ready(function(){
+//   $("#myInput").on("keyup", function() {
+//     var value = $(this).val().toLowerCase();
+//     $("#myList li").filter(function() {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// });
+
+    </script>
+
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="search">
+     <ul id="myList">
+        <li>revanth</li>
+        <li>kumar</li>
+        <li>Reddy</li>
+        <li>Kadapa</li>
+        <li>working as developer</li>
+        <li>practising jQuery now as</li>
+     </ul>
+</body>
+</html>
