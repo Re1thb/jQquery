@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM Manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1 id="header">Hello, World!</h1>
+<button id="changeText">Change Text</button> <br>
+<p class="hide_show">paragraph </p>
+<button id="hideme">Hide paragraph</button>
+<button id="showme">show paragraph</button>
+<button id="toggle">toggle paragraph</button>
+
+
+<script>
+    $(document).ready(function() {
+        // When the button is clicked, change the text of the header
+        $('#changeText').click(function() {
+            $('#header').text('Welcome to jQuery!');
+            $('#header').css('color', 'blue'); // Change the color of the header
+        });
+        // hide show toggle 
+        $('#hideme').click(function(){
+            $(".hide_show").hide("slower")
+        });
+        $('#showme').click(function(){
+            $(".hide_show").show(500)
+        });
+        $('#toggle').click(function(){
+            $(".hide_show").toggle()
+        });
+    });
+</script>
+
+</body>
+</html>

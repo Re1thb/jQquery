@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 16px;
+}
+
+#todo-list li {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-section {
+    margin-top: 20px;
+}
+
+#weather-info {
+    margin-top: 20px;
+}
+
+.effects-section {
+    margin-top: 20px;
+    text-align: center;
+}
